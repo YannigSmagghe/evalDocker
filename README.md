@@ -61,5 +61,6 @@ sudo ./rancher-compose --url http://127.0.0.1:8080 --access-key <API KEY> --secr
 ```
 Mot de passe dans le build généré de manière automatique et non en clair dans le code (via le packet apg par exemple, attention toutefois au caractères spéciaux.)
 
+Mettre en place les cron à l'aide du fichier **my_cron.sh**
 
 
