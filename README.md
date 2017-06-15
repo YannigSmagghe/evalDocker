@@ -39,7 +39,7 @@ sudo docker compose up
 
 #### <i class="icon-pencil"></i> Sécurisation
 
-La mise en place de la sécurité se fait via les 3 scripts :
+La mise en place de la sécurité se fait via les 3 scripts ils sont exécuté sur le serveur nginx via le dockerfile :
 ```
 my_cron.sh
 my_firewall.sh
