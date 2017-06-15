@@ -1,0 +1,26 @@
+version: '2'
+services:
+    mysql:
+        scale: 1
+    phpmyadmin:
+        scale: 1
+    maildev:
+        scale: 1
+    nginx:
+        scale: 1
+        health_check:
+            # Which port to perform the check against
+            port: 80
+            # Interval is measured in milliseconds
+            interval: 2000
+            initializing_timeout: 60000
+            unhealthy_threshold: 3
+            # Strategy for what to do when unhealthy
+            # In this service, Rancher will recreate any unhealthy containers
+            strategy: recreate
+            healthy_threshold: 2
+            # Response timeout is measured in milliseconds
+            response_timeout: 2000
+
+
+

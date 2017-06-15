@@ -1,0 +1,49 @@
+version: '2'
+services:
+    mysql:
+        image: mysql:5.7
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_USER=titi
+            - MYSQL_PASSWORD=toto
+        volumes:
+            - mysql-data:/var/lib/mysql
+
+    nginx:
+        build:
+          context: ./app/nginx/
+        image: nginx
+        ports:
+            - "80:80"
+        volumes:
+            - ${PWD}/app:/usr/share/nginx/html
+        links:
+            - mysql
+        depends_on:
+            - mysql
+        command: [nginx, '-g', 'daemon off;']
+
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        ports:
+            - "8888:80"
+        links:
+            - mysql
+        depends_on:
+            - mysql
+        environment:
+            - PMA_HOST=mysql
+
+    ranch:
+      image: rancher/server:stable
+      build: .
+      ports:
+        - "8080:8080"
+      links:
+           - phpmyadmin
+           - nginx
+           - mysql
+
+volumes:
+    mysql-data:
