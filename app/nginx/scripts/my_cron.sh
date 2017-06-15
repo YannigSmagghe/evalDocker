@@ -1,7 +1,7 @@
 #!/bin/bash
 
-apt-get update
-apt-get install vi -y
+#apt-get update
+#apt-get install vi -y
 
 #Set the $EDITOR environment variable to your desired editor.
 #0 3 * * * logwatch --detail low --format text > /var/cache/logwatch/logwatch.log
