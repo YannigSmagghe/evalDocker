@@ -42,8 +42,9 @@ sudo docker compose up
 La mise en place de la sécurité se fait via les 3 scripts ils sont exécuté sur le serveur nginx via le dockerfile :
 ```
 my_cron.sh
-my_firewall.sh
 my_scriptsecu.sh
 ```
+Le fichier **my_firewall.sh** est à lire, sans le paramètres  **--privilege** il n'est pas possible de gérer ufw dans le container.
+
 #### <i class="icon-trash"></i> Problèmes possibles
 
