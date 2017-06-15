@@ -46,5 +46,20 @@ my_scriptsecu.sh
 ```
 Le fichier **my_firewall.sh** est à lire, sans le paramètres  **--privilege** il n'est pas possible de gérer ufw dans le container.
 
-#### <i class="icon-trash"></i> Problèmes possibles
+#### <i class="icon-trash"></i> Mots de passes
+Phpmyadmin : http://localhost:8888/ user : titi mdp : toto
+
+#### <i class="icon-trash"></i> Reste à faire
+Sous ranch : créer 2 api key **advanced**
+Déclarer l'host via la commande :
+```
+sudo docker run --rm --privileged -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/rancher:/var/lib/rancher rancher/agent:v1.2.2 http://localhost:8080/v1/scripts/34D113B35079BC140F76:1483142400000:RnkwCWcCBj32tC8wF4aazxyV8gM
+```
+set les clé api  :
+```
+sudo ./rancher-compose --url http://127.0.0.1:8080 --access-key <API KEY> --secret-key <API KEY SECRET> up
+```
+Mot de passe dans le build généré de manière automatique et non en clair dans le code (via le packet apg par exemple, attention toutefois au caractères spéciaux.)
+
+
 
