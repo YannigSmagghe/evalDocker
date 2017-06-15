@@ -7,8 +7,8 @@ Se groupe se compose de
 
  1. Yannig Smagghe (dev9)
  2. Thibauld Delaitre (A4)
- 3. Alban
- 4. Kevin
+ 3. Alban Lamberty (A4)
+ 4. Kevin Cogerino (A4)
 
 ----------
 
