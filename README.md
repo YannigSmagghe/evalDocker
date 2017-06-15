@@ -39,4 +39,3 @@ sudo docker compose up
 
 #### <i class="icon-trash"></i> Problèmes possibles
 
-Aucun
