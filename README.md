@@ -37,6 +37,11 @@ Se placer dans le dossier contenant le projet
 sudo docker-compose up
 ```
 
+Voir le projet dans le navigateur :
+```
+http://localhost:8080/
+```
+
 #### <i class="icon-pencil"></i> Sécurisation
 
 La mise en place de la sécurité se fait via les 3 scripts ils sont exécuté sur le serveur nginx via le dockerfile :
