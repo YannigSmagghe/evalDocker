@@ -37,5 +37,13 @@ Se placer dans le dossier contenant le projet
 sudo docker compose up
 ```
 
+#### <i class="icon-pencil"></i> Sécurisation
+
+La mise en place de la sécurité se fait via les 3 scripts :
+```
+my_cron.sh
+my_firewall.sh
+my_scriptsecu.sh
+```
 #### <i class="icon-trash"></i> Problèmes possibles
 
