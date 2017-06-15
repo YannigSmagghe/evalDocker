@@ -34,7 +34,7 @@ git clone https://github.com/YannigSmagghe/evalDocker
 #### <i class="icon-pencil"></i> Lancer le projet
 Se placer dans le dossier contenant le projet
 ```
-sudo docker compose up
+sudo docker-compose up
 ```
 
 #### <i class="icon-pencil"></i> Sécurisation
